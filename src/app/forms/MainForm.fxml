@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688" prefWidth="1496" styleClass="">
+  <children>
+    <TableView AnchorPane.bottomAnchor="8" AnchorPane.leftAnchor="8" AnchorPane.topAnchor="128" editable="false" fixedCellSize="-1" focusTraversable="true" id="table" layoutX="8" layoutY="128" prefHeight="552" prefWidth="357" style="-fx-font-size: 14px;&#10;-fx-font-weight: 600;" styleClass="table-view " tableMenuButtonVisible="false">
+      <placeholder>
+        <Label/>
+      </placeholder>
+      <columns>
+        <TableColumn id="id" maxWidth="5000" minWidth="10" prefWidth="50" resizable="true" sortable="false" style="-fx-alignment: center; " text="ID" visible="false"/>
+        <TableColumn id="num" maxWidth="5000" minWidth="10" prefWidth="50" resizable="true" sortable="false" style="-fx-alignment: center; " text="#" visible="true"/>
+        <TableColumn id="fio" maxWidth="5000" minWidth="10" prefWidth="305" resizable="true" sortable="false" style="-fx-alignment: center-left; " text="ФИО" visible="true"/>
+        <TableColumn id="groop" maxWidth="5000" minWidth="10" prefWidth="60" resizable="true" sortable="false" style="-fx-alignment: center; " text="Группа" visible="false"/>
+      </columns>
+    </TableView>
+    <Data cursor="DEFAULT" enabled="1" id="data-table" visible="1"/>
+    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="addButton" layoutX="8" layoutY="8" prefHeight="32" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" textFill="#000000" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="deleteButton" layoutX="104" layoutY="8" prefHeight="32" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" textFill="#000000" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </Button>
+    <Data cursor="DEFAULT" enabled="" graphic=".data/img/ec9335b4-fa81-4809-bf01-fc941c8c80ef-1443098711901.png" id="data-deleteButton" tooltipText="Удалить" visible="1"/>
+    <LabelEx AnchorPane.rightAnchor="8" AnchorPane.topAnchor="0" alignment="CENTER_RIGHT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="countLabel" layoutX="1248" layoutY="0" prefHeight="25" prefWidth="240" styleClass="label " text="0 - Количество учеников" textAlignment="LEFT" textFill="#1a1a1a" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="16"/>
+      </font>
+    </LabelEx>
+    <Data cursor="DEFAULT" enabled="1" id="data-countLabel" visible="1"/>
+    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="deleteAllButton" layoutX="152" layoutY="8" prefHeight="32" prefWidth="104" styleClass="button " text="Удалить все" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </Button>
+    <Data cursor="DEFAULT" enabled="1" graphic="" id="data-deleteAllButton" visible=""/>
+    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="editButton" layoutX="56" layoutY="8" prefHeight="32" prefWidth="40" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </Button>
+    <Data cursor="DEFAULT" enabled="" graphic=".data/img/48f0d218-c050-49d3-88b9-3e2cfc9957e3-1451774384141.png" id="data-editButton" tooltipText="Редактировать" visible="1"/>
+    <Data cursor="DEFAULT" graphic=".data/img/91856a64-3118-439a-abf2-dbd11b40c7cf-1443098717234.png" id="data-addButton" tooltipText="Добавить"/>
+    <TitledPane AnchorPane.bottomAnchor="16" AnchorPane.leftAnchor="376" AnchorPane.topAnchor="360" alignment="CENTER" animated="false" collapsible="false" contentDisplay="LEFT" ellipsisString="..." expanded="true" focusTraversable="true" graphicTextGap="0" id="spoiler_info" layoutX="376" layoutY="360" prefHeight="312" prefWidth="392" styleClass="titled-pane " text="Личная карточка" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="14"/>
+      </font>
+      <content>
+        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="281" prefWidth="390" styleClass="">
+          <padding>
+            <Insets bottom="9.6" left="9.6" right="9.6" top="9.6"/>
+          </padding>
+          <children>
+            <LabelEx alignment="CENTER" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="0" id="label_name" layoutX="16" layoutY="0" prefHeight="30" prefWidth="352" styleClass="label " text="ФИО" textAlignment="CENTER" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="20"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-label_name" visible="1"/>
+            <LabelEx alignment="CENTER_LEFT" autoSize="true" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label_pay_to" layoutX="8" layoutY="48" prefHeight="21.28125" prefWidth="158.1015625" styleClass="label " text="Оплачено дней до : " textAlignment="LEFT" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="16"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-label_pay_to" visible="1"/>
+            <LabelEx alignment="CENTER_LEFT" autoSize="true" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label_paid_per_month" layoutX="8" layoutY="160" prefHeight="21.28125" prefWidth="169.3359375" styleClass="label " text="Оплачено за мемяц : " textAlignment="LEFT" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="16"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-label_paid_per_month" visible="1"/>
+            <LabelEx alignment="CENTER_LEFT" autoSize="true" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label_paid_days" layoutX="8" layoutY="80" prefHeight="21.28125" prefWidth="230.109375" styleClass="label " text="Посещено занятий за месяц :" textAlignment="LEFT" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="16"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-label_paid_days" visible="1"/>
+            <LabelEx alignment="CENTER_LEFT" autoSize="true" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label_visit_days_year" layoutX="8" layoutY="224" prefHeight="21.28125" prefWidth="188.3671875" styleClass="label " text="Посещено дней за год : " textAlignment="LEFT" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="16"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-label_visit_days_year" visible="1"/>
+            <LabelEx alignment="CENTER_LEFT" autoSize="true" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label_visit_days_mount" layoutX="8" layoutY="192" prefHeight="21.28125" prefWidth="157.6953125" styleClass="label " text="Посещено дней за : " textAlignment="LEFT" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="16"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-label_visit_days_mount" visible="1"/>
+            <Data cursor="DEFAULT" enabled="1" id="data-user_id" visible="1"/>
+            <LabelEx alignment="CENTER" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="user_id" layoutX="296" layoutY="224" prefHeight="17" prefWidth="56" styleClass="label " text="ID User" textAlignment="CENTER" underline="false" wrapText="false">
+              <font>
+                <Font name="System Regular" size="12"/>
+              </font>
+            </LabelEx>
+            <LabelEx alignment="CENTER_LEFT" autoSize="true" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label_debt_days" layoutX="8" layoutY="120" prefHeight="21.28125" prefWidth="125.2734375" styleClass="label " text="Оплатить дней :" textAlignment="LEFT" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="16"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-label_debt_days" visible="1"/>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <Data cursor="DEFAULT" enabled="1" id="data-spoiler_info" visible="1"/>
+    <TitledPane AnchorPane.bottomAnchor="16" AnchorPane.rightAnchor="384" AnchorPane.topAnchor="360" alignment="CENTER" animated="false" collapsible="false" contentDisplay="LEFT" ellipsisString="..." expanded="true" focusTraversable="true" graphicTextGap="0" id="spoiler_edit" layoutX="800" layoutY="360" prefHeight="312" prefWidth="312" styleClass="titled-pane " text="Действия" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="14"/>
+      </font>
+      <content>
+        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="281" prefWidth="310" styleClass="">
+          <padding>
+            <Insets bottom="9.6" left="9.6" right="9.6" top="9.6"/>
+          </padding>
+          <children>
+            <org.develnext.jphp.ext.javafx.support.control.NumberSpinner alignment="CENTER_LEFT" arrowsStyle="RIGHT_VERTICAL" editable="false" focusTraversable="true" id="numberField_charge_custom" initial="0" layoutX="16" layoutY="64" max="2147483647" min="0" prefHeight="32" prefWidth="136" step="250" style="-fx-font-size: 15px;&#10;-fx-font-weight: 800;" styleClass="spinner "/>
+            <Data cursor="DEFAULT" enabled="" id="data-numberField_charge_custom" visible="1"/>
+            <Button AnchorPane.bottomAnchor="23.4" alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button_update" layoutX="160" layoutY="216" prefHeight="32" prefWidth="72" styleClass="button " text="Reload" textAlignment="CENTER" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="14"/>
+              </font>
+            </Button>
+            <Data cursor="DEFAULT" enabled="" id="data-button_update" tooltipText="Обновить данные в таблицах" visible="1"/>
+            <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button_charge_del" layoutX="240" layoutY="216" prefHeight="32" prefWidth="48" styleClass="button " text="" textAlignment="CENTER" underline="false" wrapText="false">
+              <font>
+                <Font name="System Regular" size="12"/>
+              </font>
+            </Button>
+            <Data cursor="DEFAULT" enabled="" graphic=".data/img/ec9335b4-fa81-4809-bf01-fc941c8c80ef-1443098711901.png" id="data-button_charge_del" tooltipText="Удалить оплату выбранного ученика" visible="1"/>
+            <org.develnext.jphp.ext.javafx.support.control.NumberSpinner alignment="CENTER_LEFT" arrowsStyle="RIGHT_VERTICAL" editable="false" focusTraversable="true" id="numberField_day" initial="0" layoutX="160" layoutY="64" max="2147483647" min="0" prefHeight="32" prefWidth="128" step="1" style="-fx-font-size: 15px;&#10;-fx-font-weight: 800;" styleClass="spinner "/>
+            <Data cursor="DEFAULT" enabled="" id="data-numberField_day" visible="1"/>
+            <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button_charge_custom" layoutX="160" layoutY="104" prefHeight="48" prefWidth="128" styleClass="button btn-pay " text="Оплатить" textAlignment="CENTER" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="14"/>
+              </font>
+            </Button>
+            <Data cursor="DEFAULT" enabled="" id="data-button_charge_custom" tooltipText="Оплатить занятия" visible="1"/>
+            <LabelEx alignment="CENTER" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label7" layoutX="16" layoutY="40" prefHeight="20" prefWidth="136" styleClass="label " text="По сумме" textAlignment="LEFT" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="14"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-label7" visible="1"/>
+            <LabelEx alignment="CENTER" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label8" layoutX="160" layoutY="40" prefHeight="20" prefWidth="128" styleClass="label " text="По дням" textAlignment="LEFT" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="14"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-label8" visible="1"/>
+            <LabelEx alignment="CENTER" autoSize="false" autoSizeType="HORIZONTAL" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="0" id="label_day_date" layoutX="24" layoutY="8" prefHeight="20" prefWidth="264" styleClass="label " text="Дата" textAlignment="CENTER" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="14"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-label_day_date" visible="1"/>
+            <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button_visit" layoutX="160" layoutY="160" prefHeight="48" prefWidth="128" styleClass="button btn-visit " text="Посетил" textAlignment="CENTER" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="14"/>
+              </font>
+            </Button>
+            <Data cursor="DEFAULT" enabled="" id="data-button_visit" tooltipText="Поставить посещения без оплаты" visible="1"/>
+            <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button_check_debt" layoutX="16" layoutY="104" prefHeight="48" prefWidth="136" styleClass="button btn-debt " text="Проверить" textAlignment="CENTER" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="14"/>
+              </font>
+            </Button>
+            <Data cursor="DEFAULT" enabled="" id="data-button_check_debt" tooltipText="Проверить долги за месяц" visible="1"/>
+            <org.develnext.jphp.ext.javafx.support.control.NumberSpinner alignment="CENTER_LEFT" arrowsStyle="RIGHT_VERTICAL" editable="false" focusTraversable="true" id="numberField_charge_custom_count" initial="0" layoutX="16" layoutY="8" max="2147483647" min="0" prefHeight="32" prefWidth="56" step="1" styleClass="spinner "/>
+            <Data cursor="DEFAULT" enabled="1" id="data-numberField_charge_custom_count" visible=""/>
+            <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button_transfer" layoutX="16" layoutY="200" prefHeight="48" prefWidth="136" styleClass="button btn-transfer " text="Перенос" textAlignment="CENTER" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="14"/>
+              </font>
+            </Button>
+            <Data cursor="DEFAULT" enabled="1" id="data-button_transfer" visible="1"/>
+            <DatePicker editable="true" focusTraversable="true" id="dateEdit_transfer" layoutX="16" layoutY="160" prefHeight="32" prefWidth="136" promptText="" showWeekNumbers="false" style="-fx-font-size: 15px;&#10;-fx-font-weight: 800;">
+              <styleClass xmlns:fx="http://javafx.com/fxml">
+                <String fx:value="combo-box-base"/>
+                <String fx:value="date-picker"/>
+              </styleClass>
+            </DatePicker>
+            <Data cursor="DEFAULT" enabled="1" format="dd.MM.yyyy" id="data-dateEdit_transfer" tooltipText="Куда перенести" value="01.01.2000" visible="1"/>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <Data cursor="DEFAULT" enabled="1" id="data-spoiler_edit" visible="1"/>
+    <ComboBox editable="false" focusTraversable="true" id="combobox_group" layoutX="8" layoutY="48" prefHeight="32" prefWidth="96" promptText="" style="-fx-font-size: 14px;-fx-font-weight: 600;" styleClass="combo-box-base combo-box " value="Group" visibleRowCount="10">
+      <items xmlns:fx="http://javafx.com/fxml">
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="1"/>
+          <String fx:value="2"/>
+          <String fx:value="3"/>
+          <String fx:value="4"/>
+          <String fx:value="5"/>
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Data cursor="HAND" enabled="1" id="data-combobox_group" visible=""/>
+    <DatePicker editable="true" focusTraversable="true" id="dateEdit_picker" layoutX="160" layoutY="48" prefHeight="32" prefWidth="144" promptText="" showWeekNumbers="false" style="-fx-font-size: 15px;&#10;-fx-font-weight: 800;">
+      <styleClass xmlns:fx="http://javafx.com/fxml">
+        <String fx:value="combo-box-base"/>
+        <String fx:value="date-picker"/>
+      </styleClass>
+    </DatePicker>
+    <Data cursor="HAND" enabled="1" format="dd.MM.yyyy" id="data-dateEdit_picker" value="01.01.2018" visible="1"/>
+    <TextField alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="search_edit" layoutX="8" layoutY="88" prefColumnCount="12" prefHeight="32" prefWidth="296" promptText="Введите слово для поиска" styleClass="text-input text-field " text="">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </TextField>
+    <Data cursor="DEFAULT" enabled="1" id="data-search_edit" visible="1"/>
+    <Data cursor="DEFAULT" enabled="1" id="data-table_1_15" visible="1"/>
+    <Data cursor="DEFAULT" enabled="1" id="data-table_16_31" visible="1"/>
+    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="clear" layoutX="309" layoutY="88" prefHeight="32" prefWidth="56" styleClass="button " text="Clear" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="12"/>
+      </font>
+    </Button>
+    <Data cursor="DEFAULT" enabled="1" graphic="" id="data-clear" tooltipText="Очистить" visible="1"/>
+    <LabelEx AnchorPane.bottomAnchor="1" AnchorPane.rightAnchor="11" alignment="CENTER_LEFT" autoSize="true" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="Copyright" layoutX="1224" layoutY="672" prefHeight="13.30078125" prefWidth="260.537109375" styleClass="label " text="Copyright © 2018 Переверзев С.Н. Все права защищены." textAlignment="LEFT" textFill="#000000" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="10"/>
+      </font>
+    </LabelEx>
+    <Data cursor="DEFAULT" id="data-Copyright"/>
+    <TitledPane AnchorPane.bottomAnchor="16" AnchorPane.rightAnchor="8" AnchorPane.topAnchor="360" alignment="CENTER" animated="false" collapsible="false" contentDisplay="LEFT" ellipsisString="..." expanded="true" focusTraversable="true" graphicTextGap="4" id="spoiler" layoutX="1168" layoutY="360" prefHeight="312" prefWidth="320" styleClass="titled-pane " text="Всего" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="14"/>
+      </font>
+      <content>
+        <AnchorPane focusTraversable="false" id="" maxHeight="-1" maxWidth="-1" minHeight="-1" minWidth="-1" prefHeight="295" prefWidth="318" styleClass="">
+          <padding>
+            <Insets bottom="11.2" left="11.2" right="11.2" top="11.2"/>
+          </padding>
+          <children>
+            <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button_get_full_state" layoutX="88" layoutY="240" prefHeight="32" prefWidth="144" styleClass="button " text="Загрузить" textAlignment="CENTER" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="14"/>
+              </font>
+            </Button>
+            <Data cursor="DEFAULT" enabled="1" id="data-button_get_full_state" visible="1"/>
+            <LabelEx alignment="CENTER_LEFT" autoSize="true" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label" layoutX="8" layoutY="48" prefHeight="18.62109375" prefWidth="60.9765625" styleClass="label " text="Рублей : " textAlignment="LEFT" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="14"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-label" visible="1"/>
+            <LabelEx alignment="CENTER_LEFT" autoSize="true" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="labelAlt" layoutX="8" layoutY="16" prefHeight="18.62109375" prefWidth="67.3271484375" styleClass="label " text="Занятий : " textAlignment="LEFT" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="14"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-labelAlt" visible="1"/>
+            <LabelEx alignment="CENTER_LEFT" autoSize="true" autoSizeType="HORIZONTAL" contentDisplay="TEXT_ONLY" ellipsisString="..." focusTraversable="false" graphicTextGap="0" id="numberField_full_state_money" layoutX="72" layoutY="45" prefHeight="25.271484375" prefWidth="40.30078125" styleClass="label " text="~~~" textAlignment="LEFT" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="19"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-numberField_full_state_money" visible="1"/>
+            <LabelEx alignment="CENTER_LEFT" autoSize="true" autoSizeType="HORIZONTAL" contentDisplay="TEXT_ONLY" ellipsisString="..." focusTraversable="false" graphicTextGap="0" id="numberField_full_state_days" layoutX="78" layoutY="11" prefHeight="25.271484375" prefWidth="40.30078125" styleClass="label " text="~~~" textAlignment="LEFT" underline="false" wrapText="false">
+              <font>
+                <Font name="System Bold" size="19"/>
+              </font>
+            </LabelEx>
+            <Data cursor="DEFAULT" enabled="1" id="data-numberField_full_state_days" visible="1"/>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <Data cursor="DEFAULT" enabled="1" id="data-spoiler" visible="1"/>
+    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button" layoutX="309" layoutY="48" prefHeight="32" prefWidth="56" styleClass="button " text="Now" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="12"/>
+      </font>
+    </Button>
+    <Data cursor="DEFAULT" enabled="1" id="data-button" visible="1"/>
+    <LabelEx alignment="CENTER_LEFT" autoSize="true" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label_price_money" layoutX="432" layoutY="8" prefHeight="21.28125" prefWidth="222.375" styleClass="label " text="Стоимость одного занятия : " textAlignment="LEFT" textFill="#1a1a1a" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="16"/>
+      </font>
+    </LabelEx>
+    <Data cursor="DEFAULT" enabled="1" id="data-label_price_money" visible="1"/>
+    <LabelEx AnchorPane.rightAnchor="8" AnchorPane.topAnchor="20" alignment="CENTER_RIGHT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="countDaysLabel" layoutX="1248" layoutY="20" prefHeight="25" prefWidth="240" styleClass="label " text="0 - Количество занятий" textAlignment="LEFT" textFill="#1a1a1a" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="16"/>
+      </font>
+    </LabelEx>
+    <Data cursor="DEFAULT" enabled="1" id="data-countDaysLabel" visible="1"/>
+    <LabelEx AnchorPane.bottomAnchor="23" AnchorPane.rightAnchor="631" alignment="CENTER" autoSize="true" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="day_id" layoutX="808" layoutY="648" prefHeight="15.9609375" prefWidth="56.73046875" styleClass="label " text="ID Оплаты" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </LabelEx>
+    <Data cursor="DEFAULT" enabled="1" id="data-day_id" visible="1"/>
+    <TableView editable="false" fixedCellSize="-1" focusTraversable="true" id="table_1_15" layoutX="376" layoutY="48" prefHeight="150" prefWidth="1048" tableMenuButtonVisible="false">
+      <styleClass xmlns:fx="http://javafx.com/fxml">
+        <String fx:value="table-view"/>
+        <String fx:value="table-row-cell"/>
+        <String fx:value="style-tables"/>
+      </styleClass>
+      <placeholder>
+        <Label/>
+      </placeholder>
+      <columnResizePolicy xmlns:fx="http://javafx.com/fxml">
+        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+      </columnResizePolicy>
+      <columns>
+        <TableColumn id="info" maxWidth="5000" minWidth="20" prefWidth="75" resizable="true" sortable="false" style="-fx-alignment: center; " text="#" visible="true"/>
+        <TableColumn id="day_1" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="1" visible="true"/>
+        <TableColumn id="day_2" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="2" visible="true"/>
+        <TableColumn id="day_3" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="3" visible="true"/>
+        <TableColumn id="day_4" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="4" visible="true"/>
+        <TableColumn id="day_5" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="5" visible="true"/>
+        <TableColumn id="day_6" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="6" visible="true"/>
+        <TableColumn id="day_7" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="7" visible="true"/>
+        <TableColumn id="day_8" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="8" visible="true"/>
+        <TableColumn id="day_9" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="9" visible="true"/>
+        <TableColumn id="day_10" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="10" visible="true"/>
+        <TableColumn id="day_11" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="11" visible="true"/>
+        <TableColumn id="day_12" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="12" visible="true"/>
+        <TableColumn id="day_13" maxWidth="5000" minWidth="10" prefWidth="64" resizable="true" sortable="false" style="-fx-alignment: center; " text="13" visible="true"/>
+        <TableColumn id="day_14" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="14" visible="true"/>
+        <TableColumn id="day_15" maxWidth="5000" minWidth="10" prefWidth="64" resizable="true" sortable="false" style="-fx-alignment: center; " text="15" visible="true"/>
+      </columns>
+    </TableView>
+    <TableView editable="false" fixedCellSize="-1" focusTraversable="true" id="table_16_31" layoutX="376" layoutY="200" prefHeight="150" prefWidth="1112" tableMenuButtonVisible="false">
+      <styleClass xmlns:fx="http://javafx.com/fxml">
+        <String fx:value="table-view"/>
+        <String fx:value="table-row-cell"/>
+        <String fx:value="style-tables"/>
+      </styleClass>
+      <placeholder>
+        <Label/>
+      </placeholder>
+      <columnResizePolicy xmlns:fx="http://javafx.com/fxml">
+        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+      </columnResizePolicy>
+      <columns>
+        <TableColumn id="info" maxWidth="5000" minWidth="20" prefWidth="75" resizable="true" sortable="false" style="-fx-alignment: center; " text="#" visible="true"/>
+        <TableColumn id="day_16" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="16" visible="true"/>
+        <TableColumn id="day_17" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="17" visible="true"/>
+        <TableColumn id="day_18" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="18" visible="true"/>
+        <TableColumn id="day_19" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="19" visible="true"/>
+        <TableColumn id="day_20" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="20" visible="true"/>
+        <TableColumn id="day_21" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="21" visible="true"/>
+        <TableColumn id="day_22" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="22" visible="true"/>
+        <TableColumn id="day_23" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="23" visible="true"/>
+        <TableColumn id="day_24" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="24" visible="true"/>
+        <TableColumn id="day_25" maxWidth="5000" minWidth="10" prefWidth="64" resizable="true" sortable="false" style="-fx-alignment: center; " text="25" visible="true"/>
+        <TableColumn id="day_26" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="26" visible="true"/>
+        <TableColumn id="day_27" maxWidth="5000" minWidth="10" prefWidth="64" resizable="true" sortable="false" style="-fx-alignment: center; " text="27" visible="true"/>
+        <TableColumn id="day_28" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="28" visible="true"/>
+        <TableColumn id="day_29" maxWidth="5000" minWidth="10" prefWidth="64" resizable="true" sortable="false" style="-fx-alignment: center; " text="29" visible="true"/>
+        <TableColumn id="day_30" maxWidth="5000" minWidth="10" prefWidth="65" resizable="true" sortable="false" style="-fx-alignment: center; " text="30" visible="true"/>
+        <TableColumn id="day_31" maxWidth="5000" minWidth="10" prefWidth="64" resizable="true" sortable="false" style="-fx-alignment: center; " text="31" visible="true"/>
+      </columns>
+    </TableView>
+  </children>
+</AnchorPane>

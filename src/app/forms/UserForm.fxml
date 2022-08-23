@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?import javafx.scene.*?><?import javafx.collections.*?><?import javafx.scene.layout.*?><?import javafx.scene.control.*?><?import javafx.scene.text.*?><?import javafx.scene.image.*?><?import javafx.scene.shape.*?><?import javafx.scene.paint.*?><?import javafx.scene.web.*?><?import javafx.geometry.*?><?import java.lang.*?><?import org.develnext.jphp.ext.javafx.classes.data.*?><?import org.develnext.jphp.ext.javafx.support.*?><?import org.develnext.jphp.ext.javafx.support.control.*?><?import org.develnext.jphp.ext.game.support.*?><AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" focusTraversable="false" id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160" prefWidth="352" styleClass="">
+  <children>
+    <TextField AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" alignment="CENTER_LEFT" editable="true" focusTraversable="true" id="fioEdit" layoutX="8" layoutY="24" prefColumnCount="12" prefHeight="32" prefWidth="416" promptText="" styleClass="text-input text-field " text="">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </TextField>
+    <Data cursor="DEFAULT" enabled="1" id="data-fioEdit" visible="1"/>
+    <LabelEx alignment="CENTER_LEFT" autoSize="false" contentDisplay="LEFT" ellipsisString="..." focusTraversable="false" graphicTextGap="4" id="label" layoutX="8" layoutY="0" prefHeight="24" prefWidth="96" styleClass="label " text="ФИО :" textAlignment="LEFT" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="14"/>
+      </font>
+    </LabelEx>
+    <Data cursor="DEFAULT" enabled="1" id="data-label" visible="1"/>
+    <ComboBox AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" editable="false" focusTraversable="true" id="groopSelect" layoutX="8" layoutY="64" prefHeight="32" prefWidth="336" promptText="" styleClass="combo-box-base combo-box " value="Группа" visibleRowCount="10">
+      <items xmlns:fx="http://javafx.com/fxml">
+        <FXCollections fx:factory="observableArrayList"/>
+      </items>
+    </ComboBox>
+    <Data cursor="DEFAULT" enabled="1" id="data-groopSelect" visible="1"/>
+    <Button alignment="CENTER" contentDisplay="LEFT" ellipsisString="..." focusTraversable="true" graphicTextGap="4" id="button" layoutX="232" layoutY="120" prefHeight="32" prefWidth="112" styleClass="button " text="Сохранить" textAlignment="CENTER" underline="false" wrapText="false">
+      <font>
+        <Font name="System Bold" size="12"/>
+      </font>
+    </Button>
+    <Data cursor="DEFAULT" enabled="1" graphic=".data/img/a0b4fb32-175a-4682-8054-fed0d614cfea-1443098714896.png" id="data-button" visible="1"/>
+    <Separator AnchorPane.leftAnchor="8" AnchorPane.rightAnchor="8" focusTraversable="false" id="separator" layoutX="8" layoutY="104" orientation="HORIZONTAL" prefHeight="16" prefWidth="416" styleClass="separator "/>
+    <Data cursor="DEFAULT" enabled="1" id="data-separator" visible="1"/>
+    <TextArea editable="true" focusTraversable="true" id="textArea_search" layoutX="8" layoutY="120" prefColumnCount="40" prefHeight="56" prefWidth="224" promptText="" styleClass="text-input text-area " text="" wrapText="false">
+      <font>
+        <Font name="System Regular" size="12"/>
+      </font>
+    </TextArea>
+    <Data cursor="DEFAULT" enabled="1" id="data-textArea_search" visible=""/>
+  </children>
+</AnchorPane>
